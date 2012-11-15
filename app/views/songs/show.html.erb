@@ -1,0 +1,14 @@
+<% title @song.name %>
+
+<p>Name: <%= @song.name %></p>
+<p>Artist: <%= @song.artist %></p>
+<p>Genre: <%= @song.genre %></p>
+
+<h3>Comments</h3>
+<div id="song-comments">
+<%= render :partial => 'songComments', :locals => {:song => @song, :comments => @comments } %>
+</div>
+<p><%= render :partial => 'comments/form', :locals => {:song => @song, :comment => @comment ? @comment : Comment.new} %></p>
+<%= link_to "Edit", edit_song_path(@song) %>
+<%= link_to "Delete", song_path(@song), :method => :delete, :confirm => "Are you sure?" %>
+<%= link_to "Back to all songs", songs_path %>

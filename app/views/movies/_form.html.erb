@@ -1,0 +1,16 @@
+<%= form_for @movie do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :genre %><br />
+    <%= f.text_field :genre %>
+  </p>
+  <p>
+    <%= f.label :watched %><br />
+    <%= f.check_box :watched %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

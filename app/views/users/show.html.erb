@@ -1,0 +1,9 @@
+<% title "#{current_user.fname}'s Profile" %>
+<p>Username: <%= current_user.username %></p>
+<p>Email: <%= current_user.email %></p>
+<p>First Name: <%= current_user.fname %></p>
+<p>Last Name: <%= current_user.lname %></p>
+
+<%= link_to "Edit", edit_user_path(current_user) %>
+<%= link_to "Delete this account", user_path(current_user), method: "delete", :confirm => "Are you sure?" %>
+

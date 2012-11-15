@@ -1,0 +1,35 @@
+<%= form_for @user do |f| %>
+  <%= f.error_messages %>
+  <% if current_user %>
+<p>
+    <%= f.label :email %>: 
+    <%= current_user.email %>
+  </p>
+  <% else %>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <% end %>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.label "First Name" %><br />
+    <%= f.text_field :fname %>
+  </p>
+  <p>
+    <%= f.label "Last Name" %><br />
+    <%= f.text_field :lname %>
+  </p>
+  <% if current_user %>
+  <p><%= f.submit "Update" %></p>
+  <% else %>
+  <p><%= f.submit "Register" %></p>
+
+<% end end %>

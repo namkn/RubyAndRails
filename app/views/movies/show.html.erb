@@ -1,0 +1,21 @@
+<% title @movie.name %>
+<p><img src="/assets/<%= @movie.name %>.jpg" width="300" alt="image"></p>
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+<p>
+  <strong>Genre:</strong>
+  <%= @movie.genre %>
+</p>
+<p>
+  <strong>Watched:</strong>
+  <%= @movie.watched %>
+</p>
+
+
+<p>
+  <%= link_to "Edit", edit_movie_path(@movie) %> |
+  <%= link_to "Destroy", @movie, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", movies_path %>
+</p>

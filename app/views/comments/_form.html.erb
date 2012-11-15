@@ -1,0 +1,14 @@
+<%= form_for [@song, @comment], remote: true do |f| %>
+<%= f.error_messages %>
+<p>
+	<%= f.label :comment %><br/>
+	<%= f.text_field :content %>
+  <% if @comment %>
+  <%= f.submit "Update" %>
+  </p>
+  <% else %>
+  </p>
+	<p><%= f.submit "Post" %></p>
+  <% end %>
+
+<% end %>

@@ -1,0 +1,2 @@
+$('#comment_<%= @comment.id %>').hide();
+$('#song-comments').html('<%= j render :partial => 'songs/songComments', :locals => {:song => @song, :comments => @comments } %>');

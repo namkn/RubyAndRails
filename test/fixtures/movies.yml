@@ -1,0 +1,9 @@
+one:
+  name: MyString
+  genre: MyString
+  watched: false
+
+two:
+  name: MyString
+  genre: MyString
+  watched: false

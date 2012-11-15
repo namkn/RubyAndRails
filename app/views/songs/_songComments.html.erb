@@ -1,0 +1,6 @@
+<% comments.each do |c| %>
+	<%= div_for c do %>
+		"<%= c.content %>" <%= link_to "Edit", edit_song_comment_path(@song, c), remote: true %>
+		<%= link_to "Delete", song_comment_path(@song, c), remote: true, :method => :delete, :confirm => "Are you sure?" %>
+	<% end %>
+<% end %>
